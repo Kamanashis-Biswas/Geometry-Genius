@@ -7,7 +7,6 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     const triangleHeight=parseInt(triangleHeightString);
 
     const geometryArea=0.5*triangleBase*triangleHeight;
-
     diplayData(geometryName,geometryArea);
 })
 
@@ -33,10 +32,19 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
 
     const geometryArea= parallelogramBase*parallelogramHeight;
     diplayData(geometryName,geometryArea);
-
-    
 })
 
+//Rhombus
+document.getElementById('btn-rhombus').addEventListener('click',function(){
+    const geometryName=document.getElementById('rhombus-name').innerText;
+    const rhombusDfirstString=document.getElementById('rhombus-dfirst-input').value;
+    const rhombusDfirst=parseInt(rhombusDfirstString);
+    const rhombusDlastString=document.getElementById('rhombus-dlast-input').value;
+    const rhombusDlast=parseInt(rhombusDlastString);
+
+    const geometryArea= 0.5*rhombusDfirst*rhombusDlast;
+    diplayData(geometryName,geometryArea);
+})
 
 
 
