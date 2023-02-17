@@ -23,6 +23,20 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
     diplayData(geometryName,geometryArea);
 })
 
+//Parallelogram
+document.getElementById('btn-parallelogram').addEventListener('click',function(){
+    const geometryName=document.getElementById('parallelogram-name').innerText;
+    const parallelogramBaseString=document.getElementById('parallelogram-base-input').value;
+    const parallelogramBase=parseInt(parallelogramBaseString);
+    const parallelogramHeightString=document.getElementById('parallelogram-height-input').value;
+    const parallelogramHeight=parseInt(parallelogramHeightString);
+
+    const geometryArea= parallelogramBase*parallelogramHeight;
+    diplayData(geometryName,geometryArea);
+
+    
+})
+
 
 
 
