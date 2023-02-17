@@ -17,6 +17,10 @@ document.getElementById('btn-rectangle').addEventListener('click',function(){
     const rectangleWeigthString=document.getElementById('rectangle-weigth-input').value;
     const rectangleWeigth=parseInt(rectangleWeigthString);
     const rectangleLengthString=document.getElementById('rectangle-length-input').value;
+    const rectangleLength=parseInt(rectangleLengthString);
+
+    const geometryArea=rectangleWeigth*rectangleLength;
+    diplayData(geometryName,geometryArea);
 })
 
 
