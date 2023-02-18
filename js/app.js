@@ -40,7 +40,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     serial += 1;
     const geometryName = getInnerText('parallelogram-name');
     const parallelogramBase =getInputValue('parallelogram-base-input');
-    const parallelogramHeight =getInputValue('rectangle-length-input');
+    const parallelogramHeight =getInputValue('parallelogram-height-input');
 
     const geometryArea = (parallelogramBase * parallelogramHeight).toFixed(2);
     diplayData(geometryName, geometryArea);
