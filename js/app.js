@@ -97,11 +97,6 @@ const rc = () => {
 }
 
 
-//get data
-function getData(){
-    
-}
-
 
 //show display data
 function diplayData(geometryName, geometryArea) {
@@ -110,7 +105,8 @@ function diplayData(geometryName, geometryArea) {
     tr.innerHTML = `
     <td>${serial}</td>
     <td>${geometryName}</td>
-    <td>${geometryArea}</td>
+    <td>${geometryArea}<span>cm<sup>2</sup></span></td>
+    <td><button class="btn btn-primary">convert to m<sup>2</sup></button></td>
     `;
     container.appendChild(tr);
 }
