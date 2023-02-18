@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    Inter: ["Inter", "sans-serif"]
+                },
+            },
+        },
+    };
+</script>
+</head>
+<body class="w-11/12 mx-auto font-Inter">
+     <!-- Header -->
+     <header>
+        <section class="bg-sky-100 rounded-lg flex flex-col md:flex-row justify-between items-center shadow-2xl">
+            <div class="py-5 ml-11">
+                <h1 class="text-3xl font-bold">Interactive</h1>
+                <p>Geometry Genius</p>
+            </div>
+            <div>
+              <a href="./index.html" target="_blank"><button class="btn btn-primary w-32 h-12 mr-10">Home</button></a>
+                
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h1 class="mt-5 text-4xl underline mb-6">Question No 1: What is DOM and what is the purpose of DOM?</h1>
+                <p class="mb-5">DOM stands for Document Object Model. It is a programming interface for web documents that provides a way to interact with the content and structure of an HTML, document as object.</p>
+                <p>The purpose of the DOM is to provide a structured representation of a web document that can be accessed and manipulated using programming languages such as JavaScript. The DOM represents the document as a tree-like structure of objects, each object representing a specific part of the document, such as an element, attribute, or text node.</p>
+                <h1 class="mt-5 text-4xl underline mb-6">Question No 2:  How will you select HTML elements using DOM? Name the DOM methods.</h1>
+                <p class="mb-5">To select HTML elements using the DOM, several methods are available. Here are some commonly used DOM methods for selecting HTML elements:</p>
+                <ol class="list-decimal ml-10">
+                    <li>getElementById()</li>
+                    <li>getElementsByTagName()</li>
+                    <li>getElementsByClassName()</li>
+                    <li>querySelector()</li>
+                    <li>querySelectorAll()</li>
+                </ol>
+                <h1 class="mt-5 text-4xl underline mb-6">Question No 3:  What is event bubble?</h1>
+                <p class="mb-5">An event bubble is a type of DOM event propagation document object. This is one way that events are handled in the browser. Events are actions performed by the user such as clicking a button, changing a field, etc. Event handlers are used to execute code when a specific type of user interface event occurs, such as when a button is clicked or when a webpage is loaded.</p>
+                <h1 class="mt-5 text-4xl underline mb-6">Question No 4:  What is a callback function and why will you use it?</h1>
+                <p class="mb-5">A callback function is a function that is passed as an argument to another function and is executed when that function completes its work. A callback function is typically used to provide a way for a function to return a result or perform some action after an asynchronous operation has completed.</p>
+                <p class="mb-5">Callbacks are commonly used in JavaScript to handle asynchronous operations, such as when making an AJAX request or using setTimeout() or setInterval() to run code at a specified interval. By providing a callback function as an argument to these functions, the program can continue executing other code during the operation and then execute the callback function when the operation completes.</p>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

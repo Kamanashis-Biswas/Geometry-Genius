@@ -28,13 +28,13 @@
 
     <!-- Header -->
     <header>
-        <section class="bg-sky-100 flex flex-col md:flex-row justify-between items-center shadow-2xl">
-            <div class="py-5 ml-11">
+        <section class="bg-sky-100 rounded-lg flex flex-col md:flex-row justify-between items-center shadow-2xl">
+            <div class="py-5 md:ml-11">
                 <h1 class="text-3xl font-bold">Interactive</h1>
                 <p>Geometry Genius</p>
             </div>
             <div>
-                <button class="btn btn-primary w-32 h-12 mr-10">Blog</button>
+              <a href="./blog.html" target="_blank"><button class="btn btn-primary w-32 h-12 mr-10">Blog</button></a>
             </div>
         </section>
     </header>
@@ -50,9 +50,9 @@
                   <h2 id="triangle-name" class="card-title">Triangle</h2>
                   <p>Area(A) = 0.5 X b X h</p>
                   <div class="flex items-center gap-3 mb-12">
-                    <input id="triangle-base-input" type="text" placeholder="b" class="input input-sm w-full max-w-xs bg-gray-300" />
+                    <input pattern="^[0-9]*$" id="triangle-base-input" type="text" placeholder="b" class="input input-sm w-full max-w-xs bg-gray-300" />
                     <p>cm</p>
-                    <input id="triangle-height-input" type="text" placeholder="h" class="input input-sm w-full max-w-xs bg-gray-300" />
+                    <input pattern="^[0-9]*$" id="triangle-height-input" type="text" placeholder="h" class="input input-sm w-full max-w-xs bg-gray-300" />
                     <p>cm</p>
                   </div>
                   <div class="card-actions">
@@ -152,7 +152,7 @@
               </div>
         </div>
         <div>
-            <h2>Area Calculation</h2>
+            <h2 class="underline text-xl font-bold">Area Calculation</h2>
             <div>
                 <div class="overflow-x-auto">
                     <table class="table table-zebra w-full">

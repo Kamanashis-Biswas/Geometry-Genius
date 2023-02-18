@@ -20,7 +20,7 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     const rectangleLengthString = document.getElementById('rectangle-length-input').value;
     const rectangleLength = parseInt(rectangleLengthString);
 
-    const geometryArea = rectangleWeigth * rectangleLength;
+    const geometryArea = (rectangleWeigth * rectangleLength).toFixed(2);
     diplayData(geometryName, geometryArea);
 })
 
@@ -33,7 +33,7 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
     const parallelogramHeightString = document.getElementById('parallelogram-height-input').value;
     const parallelogramHeight = parseInt(parallelogramHeightString);
 
-    const geometryArea = parallelogramBase * parallelogramHeight;
+    const geometryArea = (parallelogramBase * parallelogramHeight).toFixed(2);
     diplayData(geometryName, geometryArea);
 })
 
@@ -46,7 +46,7 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
     const rhombusDlastString = document.getElementById('rhombus-dlast-input').value;
     const rhombusDlast = parseInt(rhombusDlastString);
 
-    const geometryArea = 0.5 * rhombusDfirst * rhombusDlast;
+    const geometryArea = (0.5 * rhombusDfirst * rhombusDlast).toFixed(2);
     diplayData(geometryName, geometryArea);
 })
 
@@ -72,15 +72,14 @@ document.getElementById('btn-ellipse').addEventListener('click', function () {
     const ellipseLastInputString = document.getElementById('ellipse-last-input').value;
     const ellipseLastInput = parseInt(ellipseLastInputString);
 
-    const pi = 3.146;
+    const pi = 3.1416;
     const geometryArea = (pi * ellipseFirstInput * ellipseLastInput).toFixed(2);
     diplayData(geometryName, geometryArea);
 
 })
 
-
+//Hover Random Background Color for card
 const container = document.querySelectorAll(".card");
-
 container.forEach((f, index) => {
     f.addEventListener("mouseenter", (e) => {
         e.target.classList.remove("bg-base-100");
@@ -98,7 +97,10 @@ const rc = () => {
 }
 
 
-
+//get data
+function getData(){
+    
+}
 
 
 //show display data
