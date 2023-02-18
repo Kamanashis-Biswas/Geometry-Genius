@@ -1,11 +1,9 @@
 //triangle
 document.getElementById('btn-triangle').addEventListener('click', function () {
     serial += 1;
-    const geometryName = document.getElementById('triangle-name').innerText;
-    const triangleBaseString = document.getElementById('triangle-base-input').value;
-    const triangleBase = parseInt(triangleBaseString);
-    const triangleHeightString = document.getElementById('triangle-height-input').value;
-    const triangleHeight = parseInt(triangleHeightString);
+    const geometryName = getInnerText('triangle-name');
+    const triangleBase =getInputValue('triangle-base-input');
+    const triangleHeight =getInputValue('triangle-height-input');
 
     const geometryArea = 0.5 * triangleBase * triangleHeight;
     diplayData(geometryName, geometryArea);
@@ -14,11 +12,9 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
 //Rectangle
 document.getElementById('btn-rectangle').addEventListener('click', function () {
     serial += 1;
-    const geometryName = document.getElementById('rectangle-name').innerText;
-    const rectangleWeigthString = document.getElementById('rectangle-weigth-input').value;
-    const rectangleWeigth = parseInt(rectangleWeigthString);
-    const rectangleLengthString = document.getElementById('rectangle-length-input').value;
-    const rectangleLength = parseInt(rectangleLengthString);
+    const geometryName = getInnerText('rectangle-name');
+    const rectangleWeigth =getInputValue('rectangle-weigth-input');
+    const rectangleLength =getInputValue('rectangle-length-input');
 
     const geometryArea = (rectangleWeigth * rectangleLength).toFixed(2);
     diplayData(geometryName, geometryArea);
@@ -27,11 +23,9 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
 //Parallelogram
 document.getElementById('btn-parallelogram').addEventListener('click', function () {
     serial += 1;
-    const geometryName = document.getElementById('parallelogram-name').innerText;
-    const parallelogramBaseString = document.getElementById('parallelogram-base-input').value;
-    const parallelogramBase = parseInt(parallelogramBaseString);
-    const parallelogramHeightString = document.getElementById('parallelogram-height-input').value;
-    const parallelogramHeight = parseInt(parallelogramHeightString);
+    const geometryName = getInnerText('parallelogram-name');
+    const parallelogramBase =getInputValue('parallelogram-base-input');
+    const parallelogramHeight =getInputValue('rectangle-length-input');
 
     const geometryArea = (parallelogramBase * parallelogramHeight).toFixed(2);
     diplayData(geometryName, geometryArea);
@@ -40,11 +34,9 @@ document.getElementById('btn-parallelogram').addEventListener('click', function 
 //Rhombus
 document.getElementById('btn-rhombus').addEventListener('click', function () {
     serial += 1;
-    const geometryName = document.getElementById('rhombus-name').innerText;
-    const rhombusDfirstString = document.getElementById('rhombus-dfirst-input').value;
-    const rhombusDfirst = parseInt(rhombusDfirstString);
-    const rhombusDlastString = document.getElementById('rhombus-dlast-input').value;
-    const rhombusDlast = parseInt(rhombusDlastString);
+    const geometryName = getInnerText('rhombus-name');
+    const rhombusDfirst =getInputValue('rhombus-dfirst-input');
+    const rhombusDlast =getInputValue('rhombus-dlast-input');
 
     const geometryArea = (0.5 * rhombusDfirst * rhombusDlast).toFixed(2);
     diplayData(geometryName, geometryArea);
@@ -53,11 +45,9 @@ document.getElementById('btn-rhombus').addEventListener('click', function () {
 //Pentagon
 document.getElementById('btn-pentagon').addEventListener('click', function () {
     serial += 1;
-    const geometryName = document.getElementById('pentagon-name').innerText;
-    const pentagonPerimeterString = document.getElementById('pentagon-perimeter-input').value;
-    const pentagonPerimeter = parseInt(pentagonPerimeterString);
-    const pentagonApothemString = document.getElementById('pentagon-apothem-input').value;
-    const pentagonApothem = parseInt(pentagonApothemString);
+    const geometryName = getInnerText('pentagon-name');
+    const pentagonPerimeter =getInputValue('pentagon-perimeter-input');
+    const pentagonApothem =getInputValue('pentagon-apothem-input');
 
     const geometryArea = (0.5 * pentagonPerimeter * pentagonApothem).toFixed(2);
     diplayData(geometryName, geometryArea);
@@ -66,11 +56,9 @@ document.getElementById('btn-pentagon').addEventListener('click', function () {
 //Ellipse
 document.getElementById('btn-ellipse').addEventListener('click', function () {
     serial += 1;
-    const geometryName = document.getElementById('ellipse-name').innerText;
-    const ellipseFirstInputString = document.getElementById('ellipse-first-input').value;
-    const ellipseFirstInput = parseInt(ellipseFirstInputString);
-    const ellipseLastInputString = document.getElementById('ellipse-last-input').value;
-    const ellipseLastInput = parseInt(ellipseLastInputString);
+    const geometryName = getInnerText('ellipse-name');
+    const ellipseFirstInput =getInputValue('ellipse-first-input');
+    const ellipseLastInput =getInputValue('ellipse-last-input');
 
     const pi = 3.1416;
     const geometryArea = (pi * ellipseFirstInput * ellipseLastInput).toFixed(2);
@@ -98,6 +86,21 @@ const rc = () => {
 
 
 
+function getInputValue(id){
+
+    const inputTypeValu=document.getElementById(id);
+    const inputTypeInnerElement=inputTypeValu.value
+    const inputTypeOfNumber=parseInt(inputTypeInnerElement);
+    inputTypeValu.value ="";
+    return inputTypeOfNumber;
+};
+
+function getInnerText(id){
+    const heading=document.getElementById(id);
+    const headingInnerText=heading.innerText;
+    return headingInnerText
+}
+
 //show display data
 function diplayData(geometryName, geometryArea) {
     const container = document.getElementById('table-container');
@@ -105,7 +108,7 @@ function diplayData(geometryName, geometryArea) {
     tr.innerHTML = `
     <td>${serial}</td>
     <td>${geometryName}</td>
-    <td>${geometryArea}<span>cm<sup>2</sup></span></td>
+    <td>${geometryArea}<span> cm<sup>2</sup></span></td>
     <td><button class="btn btn-primary">convert to m<sup>2</sup></button></td>
     `;
     container.appendChild(tr);
