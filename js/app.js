@@ -3,8 +3,15 @@ document.getElementById('btn-triangle').addEventListener('click', function () {
     serial += 1;
     const geometryName = getInnerText('triangle-name');
     const triangleBase =getInputValue('triangle-base-input');
+    if(isNaN(triangleBase)){
+        alert("Provide a number for Triangle Base");
+        return;
+    }
     const triangleHeight =getInputValue('triangle-height-input');
-
+    if(isNaN(triangleHeight)){
+        alert("Provide a number for Triangle Height");
+        return;
+    }
     const geometryArea = 0.5 * triangleBase * triangleHeight;
     diplayData(geometryName, geometryArea);
 })
@@ -14,7 +21,15 @@ document.getElementById('btn-rectangle').addEventListener('click', function () {
     serial += 1;
     const geometryName = getInnerText('rectangle-name');
     const rectangleWeigth =getInputValue('rectangle-weigth-input');
+    if(isNaN(rectangleWeigth)){
+        alert("Provide a number for Rectangle Weigth");
+        return;
+    }
     const rectangleLength =getInputValue('rectangle-length-input');
+    if(isNaN(rectangleLength)){
+        alert("Provide a number for Rectangle Length");
+        return;
+    }
 
     const geometryArea = (rectangleWeigth * rectangleLength).toFixed(2);
     diplayData(geometryName, geometryArea);
@@ -85,13 +100,12 @@ const rc = () => {
 }
 
 
-
+//common function for input value
 function getInputValue(id){
-
-    const inputTypeValu=document.getElementById(id);
-    const inputTypeInnerElement=inputTypeValu.value
+    const inputTypeValue=document.getElementById(id);
+    const inputTypeInnerElement=inputTypeValue.value
     const inputTypeOfNumber=parseInt(inputTypeInnerElement);
-    inputTypeValu.value ="";
+    inputTypeValue.value ="";
     return inputTypeOfNumber;
 };
 
