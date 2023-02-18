@@ -46,6 +46,32 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
     diplayData(geometryName,geometryArea);
 })
 
+//Pentagon
+document.getElementById('btn-pentagon').addEventListener('click',function(){
+    const geometryName=document.getElementById('pentagon-name').innerText;
+    const pentagonPerimeterString=document.getElementById('pentagon-perimeter-input').value;
+    const pentagonPerimeter=parseInt(pentagonPerimeterString);
+    const pentagonApothemString=document.getElementById('pentagon-apothem-input').value;
+    const pentagonApothem=parseInt(pentagonApothemString);
+
+    const geometryArea=0.5*pentagonPerimeter*pentagonApothem;
+    diplayData(geometryName,geometryArea);
+})
+
+//Ellipse
+document.getElementById('btn-ellipse').addEventListener('click',function(){
+    const geometryName=document.getElementById('ellipse-name').innerText;
+    const ellipseFirstInputString=document.getElementById('ellipse-first-input').value;
+    const ellipseFirstInput=parseInt(ellipseFirstInputString);
+    const ellipseLastInputString=document.getElementById('ellipse-last-input').value;
+    const ellipseLastInput=parseInt(ellipseLastInputString);
+
+    const pi=3.146;
+    const geometryArea=pi*ellipseFirstInput*ellipseLastInput;
+    diplayData(geometryName,geometryArea);
+
+})
+
 
 
 

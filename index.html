@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
 
     <!-- Header -->
     <header>
-        <section class="bg-sky-100 flex flex-col md:flex-row justify-between items-center">
+        <section class="bg-sky-100 flex flex-col md:flex-row justify-between items-center shadow-2xl">
             <div class="py-5 ml-11">
                 <h1 class="text-3xl font-bold">Interactive</h1>
                 <p>Geometry Genius</p>
@@ -119,16 +119,16 @@
                   <img src="./images/pentagon.png" alt="Pentagon"/>
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Pentagon</h2>
+                  <h2 id="pentagon-name" class="card-title">Pentagon</h2>
                   <p>Area(A) = 0.5 X p X b</p>
                   <div class="flex items-center gap-3 mb-12">
-                    <input type="text" placeholder="p" class="input input-sm w-full max-w-xs bg-gray-300" />
+                    <input id="pentagon-perimeter-input" type="text" placeholder="p" class="input input-sm w-full max-w-xs bg-gray-300" />
                     <p>cm</p>
-                    <input type="text" placeholder="b" class="input input-sm w-full max-w-xs bg-gray-300" />
+                    <input id="pentagon-apothem-input" type="text" placeholder="b" class="input input-sm w-full max-w-xs bg-gray-300" />
                     <p>cm</p>
                   </div>
                   <div class="card-actions">
-                    <button class="btn btn-primary normal-case text-xl">Calculate</button>
+                    <button id="btn-pentagon" class="btn btn-primary normal-case text-xl">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -137,16 +137,16 @@
                   <img src="./images/ellipse.png" alt="Ellipse"/>
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title">Ellipse</h2>
+                  <h2 id="ellipse-name" class="card-title">Ellipse</h2>
                   <p>Area(A) = &pi;ab</p>
                   <div class="flex items-center gap-3 mb-12">
-                    <input type="text" placeholder="a" class="input input-sm w-full max-w-xs bg-gray-300" />
+                    <input id="ellipse-first-input" type="text" placeholder="a" class="input input-sm w-full max-w-xs bg-gray-300" />
                     <p>cm</p>
-                    <input type="text" placeholder="b" class="input input-sm w-full max-w-xs bg-gray-300" />
+                    <input id="ellipse-last-input" type="text" placeholder="b" class="input input-sm w-full max-w-xs bg-gray-300" />
                     <p>cm</p>
                   </div>
                   <div class="card-actions">
-                    <button class="btn btn-primary normal-case text-xl">Calculate</button>
+                    <button id="btn-ellipse" class="btn btn-primary normal-case text-xl">Calculate</button>
                   </div>
                 </div>
               </div>
